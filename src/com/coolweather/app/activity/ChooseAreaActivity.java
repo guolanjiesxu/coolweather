@@ -3,6 +3,7 @@ package com.coolweather.app.activity;
 import java.util.ArrayList;
 import java.util.List;
 
+import net.youmi.android.AdManager;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -72,6 +73,9 @@ public class ChooseAreaActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		
+		AdManager.getInstance(this).init("0de8173a00f578da", "d110e74cfc1f3af2", false);
+		
 		isFromWeatherActivity = getIntent().getBooleanExtra(
 				"from_weather_activity", false);
 		SharedPreferences prefs = PreferenceManager
